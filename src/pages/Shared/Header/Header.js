@@ -40,16 +40,15 @@ const Header = () => {
           </div>
           <nav aria-label="Site Nav" className="hidden items-center justify-center gap-8 text-sm font-medium lg:flex lg:w-0 lg:flex-1">
             <Link className="text-white" to="/home">Home</Link>
-            <Link className="text-white" to="/booking">Booking</Link>
             <Link className="text-white" to="/about">About</Link>
             <Link className="text-white" to="/blog">Blog</Link>
             <Link className="text-white" to="/contact">Contact</Link>
           </nav>
           <div className="hidden items-center gap-4 lg:flex">
-            <Link to="/" className="rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600">
+            <Link to="/login" className="rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600">
               Log in
             </Link>
-            <Link to="/" className="rounded-lg bg-guru-color px-5 py-2 text-sm font-medium text-black">
+            <Link to="/signup" className="rounded-lg bg-guru-color px-5 py-2 text-sm font-medium text-black">
               Sign up
             </Link>
           </div>

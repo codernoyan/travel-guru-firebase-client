@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import heroImage from '../../assets/images/Rectangle 1.png';
 
 const Bookings = () => {
@@ -9,6 +9,11 @@ const Bookings = () => {
     toDate: ''
   });
 
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(`/hotels/${place.name}`);
+  }
   // const today = dateInfo.fromDate;
   // console.log(today.toLocaleDateString())
 
@@ -68,7 +73,7 @@ const Bookings = () => {
                     </div>
                     <div className="space-y-2">
                       <div>
-                        <button type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-guru-color text-gray-900">Start Booking</button>
+                        <button onClick={handleNavigate} type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-guru-color text-gray-900">Start Booking</button>
                       </div>
                     </div>
                   </form>
